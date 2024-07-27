@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <img src="images/logo.jpg" alt="logo" style="width: 140px;">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portoflio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/image.jpeg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="about">About me</h1>
+                    <p>Hello! My name is Abdirizak Jarso, and I am a passionate Data scientist based in Kenya. With a background in Computer science, I have developed a strong skill set in data analysis, machine learning, and web development. Over the years, I have worked on numerous projects, ranging from Movie analysis projects to aviation accidents analysis, each of which has helped me grow and refine my abilities. I am particularly interested in artificial intelligence, and I am always looking for new challenges that push me to think creatively and solve problems effectively. When I'm not working, you can find me working out, and I enjoy spending time with my family and friends. I believe in maintaining a healthy work-life balance, and I think it's important to stay curious and continually learn new things. Thank you for visiting my website. Feel free to explore my portfolio and get in touch if you'd like to discuss potential collaborations or opportunities.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Data science</span><br> Data analysis</li>
+                            <li><span>Web development</span><br> Web app development</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>2024</span><br> Data analysis</li>
+                            <li><span>2024</span><br> Web app development</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2023 to date</span><br> USIU - Applied Computer Technology</li>
+                            <li><span>2024</span><br> Moringa - Data Science</li>
+                            <li><span>2018 - 2022</span><br> Moi Forces Academy - O Levels</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copywrite">
+        <p>
+            © Abdirizak Jarso
+        </p>
+    </div>
+<script>
+var tablinks = document.getElementsByClassName("tab-links");
+ var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (var tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (var tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            document.getElementById(tabname).classList.add("active-tab");
+            event.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>
